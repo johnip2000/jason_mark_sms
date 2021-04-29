@@ -30,7 +30,7 @@ module.exports = class ShwarmaOrder extends Order{
         switch(this.stateCur){
             case OrderState.WELCOMING:
                 this.stateCur = OrderState.MENU;
-                aReturn.push("Welcome to Jason's Delicious.");
+                aReturn.push("Welcome to Jason and Marks' Delicious.");
                 aReturn.push("Please take a look of our menu. You may input the number for what you want to order.");
                 aReturn.push("1. Pizza ($5.55 - $9.55)");
                 aReturn.push("2. Sushi ($3.35 - $7.35)");

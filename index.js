@@ -28,6 +28,7 @@ app.post("/payment/:phone", (req, res) => {
   const aReply = oOrders[sFrom].handleInput(req.body);
   const oSocket = oSockets[sFrom];
   var shipping_addr = req.body.purchase_units[0].shipping.address;
+  exports.shipping_addr = shipping_addr;
   // send messages out of turn
   for (let n = 0; n < aReply.length; n++) {
     if (oSocket) {
