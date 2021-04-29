@@ -62,7 +62,10 @@ app.post("/payment", (req, res) => {
   //const sFrom = req.params.phone;
   const sFrom = req.body.telephone;
   oOrders[sFrom] = new JasonandMarkOrder(sFrom);
-  console.log("Test")
+  if (oOrders[sFrom].isDone()) {
+    delete oOrders[sFrom];
+    delete oSockets[sFrom];
+  }
   res.end(oOrders[sFrom].renderForm(req.body.title, req.body.price));
 });
 
