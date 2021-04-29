@@ -1,4 +1,5 @@
 const Order = require("./Order");
+var Import = require("./index");
 
 const OrderState = Object.freeze({
     WELCOMING:   Symbol("welcoming"),
